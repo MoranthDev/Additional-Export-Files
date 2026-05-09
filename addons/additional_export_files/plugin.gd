@@ -6,6 +6,9 @@ var export_plugin = ExportPlugin.new()
 
 func _enable_plugin() -> void:
 	add_export_plugin(export_plugin)
+	
+	if not ProjectSettings.has_setting("additional_export_files/files_at_root"):
+		ProjectSettings.set_setting("additional_export_files/files_at_root", "")
 
 
 func _disable_plugin() -> void:
@@ -13,8 +16,8 @@ func _disable_plugin() -> void:
 
 
 func _enter_tree() -> void:
-	add_export_plugin(export_plugin)
+	_enable_plugin()
 
 
 func _exit_tree() -> void:
-	remove_export_plugin(export_plugin)
+	_disable_plugin()

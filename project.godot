@@ -8,11 +8,19 @@
 
 config_version=5
 
+[additional_export_files]
+
+files_at_root="steam_api64.dll"
+
 [application]
 
 config/name="Additional-Export-Files-Addon"
+run/main_scene="uid://bk72ipj1wynqn"
 config/features=PackedStringArray("4.6")
-config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/additional_export_files/plugin.cfg")
 
 [rendering]
 
