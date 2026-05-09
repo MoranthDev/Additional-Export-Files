@@ -11,9 +11,6 @@ func _export_begin(features: PackedStringArray, is_debug: bool, path: String, fl
 	for file: String in files:
 		var filepath = ProjectSettings.globalize_path("res://" + file)
 		var to_file = global_path + file.get_file()
-		if filepath.is_absolute_path():
-			printerr(filepath + " does not exist!")
-			continue
 		
 		DirAccess.copy_absolute(filepath, to_file)
 
