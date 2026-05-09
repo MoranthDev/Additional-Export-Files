@@ -11,14 +11,11 @@ func _export_begin(features: PackedStringArray, is_debug: bool, path: String, fl
 	for file: String in files:
 		var filepath = ProjectSettings.globalize_path("res://" + file)
 		var to_file = global_path + file.get_file()
+		if filepath.is_absolute_path():
+			printerr(filepath + " does not exist!")
+			continue
 		
-		printt(filepath, to_file)
-		printt(path, file)
-		print(DirAccess.copy_absolute(filepath, to_file))
-		print("==========================================")
-	#var global_path = ProjectSettings.globalize_path("res://" + path).get_base_dir() + "/"
-	#var filepath = ProjectSettings.globalize_path("res://icon.svg")
-	#DirAccess.copy_absolute(filepath, global_path + "res://icon.svg".get_file())
+		DirAccess.copy_absolute(filepath, to_file)
 
 func _get_name() -> String:
 	return "Additional Export Files"
