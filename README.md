@@ -21,3 +21,9 @@ no hardcoding so it should work on other OS's as long as you have write permissi
 ## Why didn't you just make a simple powershell script instead of an addon???
 
 Idk, I felt like it
+
+## What features are planned?
+
+None, really. If I need more I'll add them. If there's a feature you want, lemme know I guess? I dunno if I'll actually do it but yeah, lemme know over at discord or open an issue if you wanna be ✨professional✨
+
+If you're seeing this page you probably already know what my discord is, but just in case, @moranthh
